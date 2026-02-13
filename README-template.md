@@ -6,18 +6,12 @@ This is a solution to the [Pricing component with toggle challenge on Frontend M
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+- [AI Collaboration](#ai-collaboration)
 
 ## Overview
 
@@ -27,97 +21,75 @@ Users should be able to:
 
 - View the optimal layout for the component depending on their device's screen size
 - Control the toggle with both their mouse/trackpad and their keyboard
-- **Bonus**: Complete the challenge with just HTML and CSS
-
-### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+- See pricing switch between annual and monthly when toggling
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub Repository](https://github.com)
+- Live Site URL: [Live Demo](https://your-live-site-url.com)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- CSS custom properties (variables for colors, spacing, etc.)
+- Flexbox for layout
+- Mobile-first responsive design
+- Vanilla JavaScript for toggle functionality
+- CSS transitions for smooth animations
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Working on this project, I gained experience with:
 
-To see how you can add code snippets, see below:
+1. **Toggle Switch Implementation** - Building an accessible toggle component that works with both mouse and keyboard input
+2. **CSS Custom Properties** - Using CSS variables to create a consistent color scheme and maintain DRY code
+3. **Flexbox Layout** - Positioning pricing cards responsively and managing gaps between elements
+4. **Event Handling in JavaScript** - Listening to checkbox changes and dynamically updating DOM content
+5. **Accessibility** - Understanding the importance of proper `for` and `id` attributes for form labels
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+Key code example from the JavaScript toggle functionality:
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+const toggle = document.getElementById('pricing-toggle');
+
+toggle.addEventListener('change', function() {
+    const headings = document.querySelectorAll('.card h1');
+    if (this.checked) {
+        headings[0].textContent = '$199.99';
+        headings[1].textContent = '$249.99';
+        headings[2].textContent = '$349.99';
+    }
+    else {
+        headings[0].textContent = '$19.99';
+        headings[1].textContent = '$24.99';
+        headings[2].textContent = '$34.99';
+    }  
+});
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+In future projects, I want to focus on:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- Adding more complex animations when switching between pricing tiers
+- Implementing form validation for a "Subscribe" button
+- Creating a fully responsive mobile-first design with tablet breakpoints
+- Exploring CSS Grid for more complex card layouts
+- Building more interactive features with vanilla JavaScript
 
-### Useful resources
+## AI Collaboration
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+I used GitHub Copilot as my AI assistant throughout this project:
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- **Debugging CSS layout issues** - Got help identifying why utility classes were conflicting with flexbox layout
+- **HTML accessibility** - Learned about proper label-input associations through guided questions
+- **JavaScript debugging** - Used Copilot to verify the toggle functionality and understand event listeners
+- **CSS review** - Had Copilot explain the toggle switch styles and suggest improvements
 
-### AI Collaboration
-
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
-
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+The AI helped me think through problems systematically rather than just providing answers, which strengthened my problem-solving skills.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Safeer Ahmad Rana - [@safeerrana54](https://www.safeer-ahmad-rana.vercel.app)
