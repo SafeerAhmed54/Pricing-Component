@@ -92,4 +92,4 @@ The AI helped me think through problems systematically rather than just providin
 
 ## Author
 
-- Safeer Ahmad Rana - [@safeerrana54](https:safeer-ahmad-rana.vercel.app)
+- Safeer Ahmad Rana - [@safeerahmadrana](https://safeer-ahmad-rana.vercel.app/)
